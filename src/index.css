@@ -1,0 +1,37 @@
+.periodic-table {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(18, auto);
+  gap: 2px;
+  padding: 1%;
+}
+
+.element {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 1px;
+  row-gap: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.5s ease-in-out;
+  font-size: 80%;
+}
+
+.element.selected {
+  transform: perspective(500px) translateZ(200px);
+  z-index: 3;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.element .number {
+  align-self: self-start;
+  font-size: 1.1em;
+}
+
+.element .symbol {
+  font-size: 24px;
+}
